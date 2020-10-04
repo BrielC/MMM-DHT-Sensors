@@ -10,11 +10,11 @@
 Module.register('MMM-DHT-Sensors',{
 	
 	defaults: {
-		sensorPIN: 18,
-		sensorType: "11", //DHT11 = 11, DHT22/AM2302 = 22
+		sensorPIN: 23,
+		sensorType: "22", //DHT11 = 11, DHT22/AM2302 = 22
 		units: config.units,
 		animationSpeed: 1000,
-		refreshInterval: 50000,
+		refreshInterval: 60 * 1000,
 	},
 	
 	start: function() {
@@ -35,11 +35,11 @@ Module.register('MMM-DHT-Sensors',{
 
 		if (!this.loaded) {
 			wrapper.innerHTML = this.translate('LOADING');
-			wrapper.className = "dimmed light small";
+			wrapper.className = "dimmed light meduim";	// CB
 			return wrapper;
 		}
 
-		wrapper.className = "small";
+		wrapper.className = "meduim";
 
 		var spacer = document.createElement("span");
 		spacer.innerHTML = "&nbsp;";
@@ -59,7 +59,7 @@ Module.register('MMM-DHT-Sensors',{
 			}
 			wrapper.appendChild(temperature_symbol);
 			var temperature_text = document.createElement("span");
-			temperature_text.innerHTML = " " + this.temperature + "&deg;";
+			temperature_text.innerHTML = " " + this.temperature.toFixed(1) + "&deg;" + "C "; //cobus 
 			wrapper.appendChild(temperature_text);
 		}
 
@@ -70,7 +70,7 @@ Module.register('MMM-DHT-Sensors',{
 			humidity_symbol.className = "fa fa-tint";			
 			wrapper.appendChild(humidity_symbol);
 			var humidity_text = document.createElement("span");
-			humidity_text.innerHTML = " " + this.humidity + "%";
+			humidity_text.innerHTML = " " + this.humidity.toFixed(1) + "%";
 			wrapper.appendChild(humidity_text);
 		}		
 
