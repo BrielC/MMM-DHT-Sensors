@@ -34,7 +34,7 @@ git clone https://github.com/BrielC/MMM-DHT-Sensors.git
 cd MMM-DHT-Sensors
 npm install
 ``` 
-to install dependencies. 
+Install dependencies. 
 ```
 cd node_modules/node-dht-sensor
 npm rebuild --runtime=electron --target=1.3.4 --disturl=https://atom.io/download/atom-shell --abi=49
@@ -49,7 +49,7 @@ sudo adduser -g $USER gpio
 ```
 {
 	module: "MMM-PIR-Sensor",
-  config: {
+  	config: {
   	sensorPin: 24,	// BCM 24 = GPIO 5
   	sensorState: 1,
   	relayPin: 17,	// BCM 17 = GPIO 0
