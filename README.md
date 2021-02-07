@@ -74,4 +74,4 @@ sudo adduser -g $USER gpio
 
 ## Notes
 
-Take care not to install your DHT too close to the Rpi. I had a problem where the WiFi cip on the Rpi induced EMF into the DHT sensor giving me false triggers. 7cm should be fine
+Take care not to install your DHT too close to the Rpi. I had a problem where the WiFi chip on the Rpi induced EMF into the DHT sensor giving me false triggers. 7cm should be fine
