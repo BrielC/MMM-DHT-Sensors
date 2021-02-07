@@ -34,16 +34,12 @@ git clone https://github.com/BrielC/MMM-DHT-Sensors.git
 cd MMM-DHT-Sensors
 npm install
 ``` 
-to install dependencies. Now please change into the subfolder using 
+to install dependencies. 
 ```
 cd node_modules/node-dht-sensor
-``` 
-and run the command below:
-```
 npm rebuild --runtime=electron --target=1.3.4 --disturl=https://atom.io/download/atom-shell --abi=49
 ```
 This was done to avoid any version errors.
-
 Last step before we can use the module is to add our user to the GPIO security group.
 ```
 sudo adduser -g $USER gpio
