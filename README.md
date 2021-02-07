@@ -27,17 +27,51 @@ sudo make check
 sudo make install
 ```
 
-Afterwards we can install the MagicMirror Module. Navigate to your MagicMirror's modules folder using `cd ~/MagicMirror/modules` and execute `git clone https://github.com/yawnsde/MMM-DHT-Sensors.git`, a new folder called MMM-DHT-Sensors will be created. Change into the new folder with `cd MMM-DHT-Sensors` and run `npm install` to install dependencies.
-Now please change into the subfolder using `cd node_modules/node-dht-sensor` and run the command below:
-```bash
+Afterwards we can install the MagicMirror Module. Navigate to your MagicMirror's modules folder using 
+```
+cd ~/MagicMirror/modules
+``` 
+and execute 
+```
+git clone https://github.com/BrielC/MMM-DHT-Sensors.git
+```
+a new folder called MMM-DHT-Sensors will be created. Change into the new folder with 
+```
+cd MMM-DHT-Sensors
+``` 
+and run 
+```
+npm install
+``` 
+to install dependencies. Now please change into the subfolder using 
+```
+cd node_modules/node-dht-sensor
+``` 
+and run the command below:
+```
 npm rebuild --runtime=electron --target=1.3.4 --disturl=https://atom.io/download/atom-shell --abi=49
 ```
 This was done to avoid any version errors.
 
 Last step before we can use the module is to add our user to the GPIO security group.
-```bash
+```
 sudo adduser -g $USER gpio
 ```
+
+## Simplest Config - BCM Numbering
+```
+{
+	module: "MMM-PIR-Sensor",
+  config: {
+  sensorPin: 24,
+  sensorState: 1,
+  relayPin: 17,
+  relayState: 0,
+  powerSavingDelay: 45 * 60, // 45 Minutes
+      }
+},
+```
+
 ## Usage
 
 WORK IN PROGRESS!
