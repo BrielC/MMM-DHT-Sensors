@@ -27,20 +27,11 @@ sudo make check
 sudo make install
 ```
 
-Afterwards we can install the MagicMirror Module. Navigate to your MagicMirror's modules folder using 
+Afterwards we can install the MagicMirror Module. 
 ```
 cd ~/MagicMirror/modules
-``` 
-and execute 
-```
 git clone https://github.com/BrielC/MMM-DHT-Sensors.git
-```
-a new folder called MMM-DHT-Sensors will be created. Change into the new folder with 
-```
 cd MMM-DHT-Sensors
-``` 
-and run 
-```
 npm install
 ``` 
 to install dependencies. Now please change into the subfolder using 
