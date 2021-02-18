@@ -45,20 +45,12 @@ Last step before we can use the module is to add our user to the GPIO security g
 sudo adduser -g $USER gpio
 ```
 
-## Simplest Config - BCM Numbering
+## Config
 ```
 {
-	module: "MMM-PIR-Sensor",
+	module: "MMM-DHT-Sensors",
+	position: "top_right",
   	config: {
-  	sensorPin: 24,	// BCM 24 = GPIO 5
-  	sensorState: 1,
-  	relayPin: 17,	// BCM 17 = GPIO 0
-  	relayState: 0,
-  	powerSavingDelay: 45 * 60, // 45 Minutes
       		}
 },
 ```
-
-## Notes
-
-Take care not to install your DHT too close to the Rpi. I had a problem where the WiFi chip on the Rpi induced EMF into the DHT sensor giving me false triggers. 7cm should be fine
