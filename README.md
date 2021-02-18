@@ -56,6 +56,6 @@ sudo adduser -g $USER gpio
 ```
 ## Screenshot
 ```
-
+![DHT jpg](https://user-images.githubusercontent.com/52597141/108412285-5b434a80-7232-11eb-8c0e-494a3624e522.jpg)
 
 ```
