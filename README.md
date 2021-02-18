@@ -58,3 +58,5 @@ sudo adduser -g $USER gpio
 ```
 ![DHT jpg](https://user-images.githubusercontent.com/52597141/108412285-5b434a80-7232-11eb-8c0e-494a3624e522.jpg)
 ```
+![DHT jpg](https://user-images.githubusercontent.com/52597141/108412958-17047a00-7233-11eb-878b-a4f6d5a29dc7.jpg)
+```
